@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Notif 1",
+    "desc": "Desc for notif 1.",
+    "time": "10",
+    "dndLevel": "3"
+  },
+  {
+    "title": "Notif 2",
+    "desc": "notif 2 desc.",
+    "time": "20",
+    "dndLevel": "4"
+  },
+  {
+    "title": "Notif 3",
+    "desc": "third desc.",
+    "time": "30",
+    "dndLevel": "5"
+  }
+]
