@@ -22,7 +22,6 @@
     #iframe {width: 90%; margin: auto;}
     p {margin-left: 50px; margin-right: 50px;}
   </style>
-
 </head>
 
 <body>
@@ -31,20 +30,28 @@
     <!-- Jumbotron -->
     <div class="jumbotron text-center shadow-lg p-3 mb-5 bg-light rounded">
       <br>
-      <h2>Do Not Disturb Google Calendar</h2>
+      <h2>Do Not Disturb (DND) Google Calendar</h2>
       <hr class="style14">
       <p>Schedule events by DND importance level.</p>
+      <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a>
       <br>
-      <p>1) Log in to your Gmail account and authorize Google Calendar to view your events</p>
+      <br>
+      <div style="height:250px; width:600px; float:center; border:1px solid black">
+        <p>Instructions:</p>
+        <p>1. Log in to your Gmail account and authorize Google Calendar to view your events</p>
+        <p>2. Schedule an event on the "HCI-DND" calendar by clicking on the following icon</p>
+        <p>3. Enter Threshold DND Level below:</p>
+        <label for="dnd_level" text-align="right">DND Level Threshold:</label>
+        <input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" />
+        <button onclick="getValue()" id="test">Submit</button>
+      </div>
       <!--Authorization and disconnect button-->
       <div align="center">
         <button id="authorize_button" style="display: none;" class="btn btn-primary">Authorize</button>
         <button id="signout_button" style="display: none;" class="btn btn-danger">Disconnect</button>
       </div>
       <br>
-      <p>2) Schedule an event on the "HCI-DND" calendar by clicking on the following icon</p>
       <!-- Open calendar in a new tab to add event -->
-      <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a>
       <br><br>
       <p><h5>HCI-DND</h5>
       </p>
@@ -62,8 +69,8 @@
   <!-- JS Functions -->
   <script type="text/javascript">
     // Client ID and API key from the Developer Console
-    var CLIENT_ID = '621650891382-8afqbah2q77nqi2rlj36uhnbhb6ti8fv.apps.googleusercontent.com';
-    var API_KEY = 'AIzaSyAX9WvZ4RXlElsd_e3LPBD4gecd5s4-BsI';
+    var CLIENT_ID = '557991485532-q7db07kf6dr6u9ksoj5inccembokarua.apps.googleusercontent.com';
+    var API_KEY = 'AIzaSyCk2LSHIXPuuNAYSopI9HBc4i0MVW792Ao';
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
@@ -71,7 +78,6 @@
     // Authorization scopes required by the API; multiple scopes can be
     // included, separated by spaces.
     var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
-
     var authorizeButton = document.getElementById('authorize_button');
     var signoutButton = document.getElementById('signout_button');
 
@@ -80,6 +86,14 @@
      */
     function handleClientLoad() {
       gapi.load('client:auth2', initClient);
+    }
+    
+    // Retrieves the value from DND Number Box:
+    function getValue() {
+      const dnd_input = document.getElementById("dnd_level");
+      const dndLevel = dnd_input.value;
+
+      alert(`Your DND Priority Level has been set to ${dndLevel}`)
     }
 
     /**
