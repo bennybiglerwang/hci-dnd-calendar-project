@@ -28,22 +28,20 @@
   <!-- Container -->
   <div class="container">
     <!-- Jumbotron -->
-    <div class="jumbotron text-center shadow-lg p-3 mb-5 bg-light rounded">
+    <div class="jumbotron shadow-lg p-3 mb-5 bg-light rounded">
       <br>
-      <h2>Do Not Disturb (DND) Google Calendar</h2>
+      <h2><center>Do Not Disturb (DND) Google Calendar Prototype</center></h2>
+      <center><a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a></center>
       <hr class="style14">
-      <p>Schedule events by DND importance level.</p>
-      <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a>
-      <br>
-      <br>
-      <div style="height:250px; width:600px; float:center; border:1px solid black">
-        <p>Instructions:</p>
-        <p>1. Log in to your Gmail account and authorize Google Calendar to view your events</p>
-        <p>2. Schedule an event on the "HCI-DND" calendar by clicking on the following icon</p>
-        <p>3. Enter Threshold DND Level below:</p>
-        <label for="dnd_level" text-align="right">DND Level Threshold:</label>
-        <input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" />
-        <button onclick="getValue()" id="test">Submit</button>
+      <p>Thank you for being a part of our Human-Computer Interaction Study (Group 14) as a participant! The following is a mini prototype designed to assess whether Do Not Disturb priority levels are effective to use in calendar-based events. Below are some basic instructions to get started with using our platform:</p>
+      <div>
+        <p><b><u><center>Instructions:</center></u></b></p>
+        <p>1. Log in to your Gmail account and authorize Google Calendar to view your events. For the purposes of this study, this should already been done for you!</p>
+        <p>2. Schedule an event on the "HCI-DND" calendar by either clicking on the calendar icon above next to the main header, or clicking the <b>+</b> icon in the bottom right area of the HCI-DND calendar. For this study, you will schedule an event for <b>Arithmetic Problem Solving</b>, <b>Reading Comprehension</b>, and <b>Video Comprehension.</b></p>
+        <p>3. Enter Threshold DND Level below and click the Submit button. After clicking the Submit button, a confirmation box should pop to inform you that the DND Priority Level has been set:</p>
+        <center><input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" /></center>
+        <br>
+        <center><button onclick="getValue()" id="test">Submit</button></center>
       </div>
       <!--Authorization and disconnect button-->
       <div align="center">
@@ -52,14 +50,24 @@
       </div>
       <br>
       <!-- Open calendar in a new tab to add event -->
-      <br><br>
-      <p><h5>HCI-DND</h5>
+      <center><p><h5>HCI-DND</h5></center>
       </p>
       <!-- Calendar -->
       <div class="embed-responsive embed-responsive-21by9 shadow p-3 mb-5 bg-white rounded" id="iframe">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&mode=WEEK&src=YmVubnkuYmlnbGVyd2FuZ0BnbWFpbC5jb20&src=OTRjNDExOWMwODliYjEwNTc5ZmI4MTc3NmIxMTUzYzA3OTAwNWMxYzVmNDE1Mjg3MThmZDM4NWRlNWU4ZmQ4ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23E67C73&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-      <p><i class="text-justify">Note: These events are for demonstration purposes.</i></p>
+      
+      <center>
+        <div style="display: inline-block; text-align: center;">
+          <button onclick="getValue()" id="test">Arithmetic Problem Solving</button>
+          <button onclick="getValue()" id="test">Reading Comprehension</button>
+          <button onclick="getValue()" id="test">Video Comprehension</button>
+      </div>
+      </center>
+      <br>
+      <center>
+        <p><i class="text-justify">Note: These events are for demonstration purposes.</i></p>
+      </center> 
       <br>
       <!-- List of events (nearby events) -->
       <pre id="content" style="font-family: sans-serif; line-height: 1.15;"></pre>
