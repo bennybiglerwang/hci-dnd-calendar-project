@@ -1,5 +1,6 @@
 import { mathScript } from "./mathScript.js"
 import { readingScript } from "./readingScript.js"
+import { videoScript } from "./videoScript.js";
 
 const times = [10, 30, 50, 70, 90, 110, 130, 150, 170, 190, 210, 230, 250, 270, 290, 310, 330, 350, 370, 390, 410, 430, 450, 470, 490, 510, 530, 550]
 
@@ -15,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const scripts = {
   "math": mathScript,
-  "reading": readingScript
+  "reading": readingScript,
+  "video": videoScript
 }
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms * 1000));
