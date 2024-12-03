@@ -66,10 +66,11 @@
             <input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" />
           </center>
           <br>
-          <center><button onclick="getValue()" id="test">Submit</button></center>
+          <center><button class="btn btn-primary" onclick="getValue()" id="test">Submit</button></center>
       </div>
       </center>
       <br>
+      <center><button class="btn btn-outline-info mb-3" onclick="getNotifPerm()" id="notif">Allow Notifications</button></center>
       <center>
         <p><i class="text-justify">Note: These events are for demonstration purposes.</i></p>
       </center> 
@@ -77,7 +78,6 @@
       <!-- List of events (nearby events) -->
       <pre id="content" style="font-family: sans-serif; line-height: 1.15;"></pre>
     </div>
-    <center><button onclick="getNotifPerm()" id="notif">Submit</button></center>
   </div>
 
   <!-- JS Functions -->
