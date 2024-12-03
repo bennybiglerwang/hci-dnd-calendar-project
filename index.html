@@ -22,37 +22,58 @@
     #iframe {width: 90%; margin: auto;}
     p {margin-left: 50px; margin-right: 50px;}
   </style>
-
 </head>
 
 <body>
   <!-- Container -->
   <div class="container">
     <!-- Jumbotron -->
-    <div class="jumbotron text-center shadow-lg p-3 mb-5 bg-light rounded">
+    <div class="jumbotron shadow-lg p-3 mb-5 bg-light rounded">
       <br>
-      <h2>Do Not Disturb Google Calendar</h2>
+      <h2><center>Do Not Disturb (DND) Google Calendar Prototype</center></h2>
+      <center><a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a></center>
       <hr class="style14">
-      <p>Schedule events by DND importance level.</p>
-      <br>
-      <p>1) Log in to your Gmail account and authorize Google Calendar to view your events</p>
+      <p>Thank you for being a part of our Human-Computer Interaction Study (Group 14) as a participant! The following is a mini prototype designed to assess whether Do Not Disturb priority levels are effective to use in calendar-based events. Below are some basic instructions to get started with using our platform:</p>
+      <div>
+        <p><b><u><center>Instructions:</center></u></b></p>
+        <p>1. Log in to your Gmail account and authorize Google Calendar to view your events. For the purposes of this study, this should already been done for you!</p>
+        <p>2. Schedule an event on the "HCI-DND" calendar by either clicking on the calendar icon above next to the main header, or clicking the <b>+</b> icon in the bottom right area of the HCI-DND calendar. For this study, you will schedule an event for <b>Arithmetic Task</b>, <b>Reading Task</b>, and <b>Video Comprehension Task</b></p>
+        <p>3. Enter the DND Level below and click on the task to conduct. A new window should load with the appropriate task!</p>
+      </div>
       <!--Authorization and disconnect button-->
       <div align="center">
         <button id="authorize_button" style="display: none;" class="btn btn-primary">Authorize</button>
         <button id="signout_button" style="display: none;" class="btn btn-danger">Disconnect</button>
       </div>
       <br>
-      <p>2) Schedule an event on the "HCI-DND" calendar by clicking on the following icon</p>
       <!-- Open calendar in a new tab to add event -->
-      <a target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?src=94c4119c089bb10579fb81776b1153c079005c1c5f41528718fd385de5e8fd8e@group.calendar.google.com"><img border="0" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg"alt="Google Calendar" style="width: 50px; height: auto";></a>
-      <br><br>
-      <p><h5>HCI-DND</h5>
+      <center><p><h5>HCI-DND</h5></center>
       </p>
       <!-- Calendar -->
       <div class="embed-responsive embed-responsive-21by9 shadow p-3 mb-5 bg-white rounded" id="iframe">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&mode=WEEK&src=YmVubnkuYmlnbGVyd2FuZ0BnbWFpbC5jb20&src=OTRjNDExOWMwODliYjEwNTc5ZmI4MTc3NmIxMTUzYzA3OTAwNWMxYzVmNDE1Mjg3MThmZDM4NWRlNWU4ZmQ4ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23E67C73&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-      <p><i class="text-justify">Note: These events are for demonstration purposes.</i></p>
+      
+      <center>
+        <div style="display: inline-block; text-align: center;">
+          <a id="arithmeticLink" class="btn btn-outline-dark">Arithmetic Task</a>
+          <a id="readingLink" class="btn btn-outline-dark">Reading Task</a>
+          <a id="video_compLink" class="btn btn-outline-dark">Video Comprehension Task</a>
+          <br>
+          <center>
+            <br>
+            <label for="test">DND Priority Level:</label>
+            <input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" />
+          </center>
+          <br>
+          <center><button class="btn btn-primary" onclick="getValue()" id="test">Submit</button></center>
+      </div>
+      </center>
+      <br>
+      <center><button class="btn btn-outline-info mb-3" onclick="getNotifPerm()" id="notif">Allow Notifications</button></center>
+      <center>
+        <p><i class="text-justify">Note: These events are for demonstration purposes.</i></p>
+      </center> 
       <br>
       <!-- List of events (nearby events) -->
       <pre id="content" style="font-family: sans-serif; line-height: 1.15;"></pre>
@@ -61,9 +82,10 @@
 
   <!-- JS Functions -->
   <script type="text/javascript">
+    let dndLevel = 0
     // Client ID and API key from the Developer Console
-    var CLIENT_ID = '621650891382-8afqbah2q77nqi2rlj36uhnbhb6ti8fv.apps.googleusercontent.com';
-    var API_KEY = 'AIzaSyAX9WvZ4RXlElsd_e3LPBD4gecd5s4-BsI';
+    var CLIENT_ID = '557991485532-q7db07kf6dr6u9ksoj5inccembokarua.apps.googleusercontent.com';
+    var API_KEY = 'AIzaSyCk2LSHIXPuuNAYSopI9HBc4i0MVW792Ao';
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
@@ -71,7 +93,6 @@
     // Authorization scopes required by the API; multiple scopes can be
     // included, separated by spaces.
     var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
-
     var authorizeButton = document.getElementById('authorize_button');
     var signoutButton = document.getElementById('signout_button');
 
@@ -81,7 +102,17 @@
     function handleClientLoad() {
       gapi.load('client:auth2', initClient);
     }
-
+    
+    // Retrieves the value from DND Number Box:
+    function getValue() {
+      const dnd_input = document.getElementById("dnd_level");
+      dndLevel = dnd_input.value;
+      console.log(dndLevel)
+      document.getElementById('arithmeticLink').href = `tasks/arithmetic.html?dnd=${dndLevel}`
+      document.getElementById('readingLink').href = `tasks/reading.html?dnd=${dndLevel}`
+      document.getElementById('video_compLink').href = `tasks/video_comp.html?dnd=${dndLevel}`
+      alert(`Your DND Priority Level has been set to ${dndLevel}`)
+    }
     /**
      *  Initializes the API client library and sets up sign-in state
      *  listeners.
@@ -175,6 +206,15 @@
           appendPre('No upcoming events found.');
         }
       });
+    }
+    function getNotifPerm() {
+        Notification.requestPermission().then(function(permission) {
+            if (permission === "granted") {
+                alert("Notification permission granted!");
+            } else {
+                alert("Notification permission denied.");
+            }
+        });
     }
   </script>
 

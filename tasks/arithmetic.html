@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+    <script type="module" src="script.js" defer></script>
+</head>
+<body script="math">
+<div class="container mt-5">
+    <h1 class="text-center">Arithmetic Quiz</h1>
+    <div class="text-right timer" id="timer">10:00</div>
+    <div class="text-center">Please complete this to the best of your ability. You will have 10 minutes in total, <br />and it will submit automatically. You are not expected to finish all of the questions!</div>
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question mb-4" data-correct="E">
+            <img src="questions/a_q1.png" alt="Question 1">
+            <div>
+                <input type="radio" name="q1" value="A"> A
+                <input type="radio" name="q1" value="B"> B
+                <input type="radio" name="q1" value="C"> C
+                <input type="radio" name="q1" value="D"> D
+                <input type="radio" name="q1" value="E"> E
+            </div>
+        </div>
+
+        <!-- question 2 -->
+        <div class="question mb-4" data-correct="D">
+            <img src="questions/a_q2.png" alt="Question 2">
+            <div>
+                <input type="radio" name="q2" value="A"> A
+                <input type="radio" name="q2" value="B"> B
+                <input type="radio" name="q2" value="C"> C
+                <input type="radio" name="q2" value="D"> D
+                <input type="radio" name="q2" value="E"> E
+            </div>
+        </div>
+
+        <!-- question 3 -->
+        <div class="question mb-4" data-correct="B">
+            <img src="questions/a_q3.png" alt="Question 3">
+            <div>
+                <input type="radio" name="q3" value="A"> A
+                <input type="radio" name="q3" value="B"> B
+                <input type="radio" name="q3" value="C"> C
+                <input type="radio" name="q3" value="D"> D
+                <input type="radio" name="q3" value="E"> E
+            </div>
+        </div>
+
+        <!-- question 4 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q4.png" alt="Question 4">
+            <div>
+                <input type="radio" name="q4" value="A"> A
+                <input type="radio" name="q4" value="B"> B
+                <input type="radio" name="q4" value="C"> C
+                <input type="radio" name="q4" value="D"> D
+                <input type="radio" name="q4" value="E"> E
+            </div>
+        </div>
+        <!-- question 5 -->
+        <div class="question mb-4" data-correct="B">
+            <img src="questions/a_q5.png" alt="Question 5">
+            <div>
+                <input type="radio" name="q5" value="A"> A
+                <input type="radio" name="q5" value="B"> B
+                <input type="radio" name="q5" value="C"> C
+                <input type="radio" name="q5" value="D"> D
+                <input type="radio" name="q5" value="E"> E
+            </div>
+        </div>
+        <!-- question 6 -->
+        <div class="question mb-4" data-correct="D">
+            <img src="questions/a_q6.png" alt="Question 6">
+            <div>
+                <input type="radio" name="q6" value="A"> A
+                <input type="radio" name="q6" value="B"> B
+                <input type="radio" name="q6" value="C"> C
+                <input type="radio" name="q6" value="D"> D
+                <input type="radio" name="q6" value="E"> E
+            </div>
+        </div>
+        <!-- question 7 -->
+        <div class="question mb-4" data-correct="B">
+            <img src="questions/a_q7.png" alt="Question 7">
+            <div>
+                <input type="radio" name="q7" value="A"> A
+                <input type="radio" name="q7" value="B"> B
+                <input type="radio" name="q7" value="C"> C
+                <input type="radio" name="q7" value="D"> D
+                <input type="radio" name="q7" value="E"> E
+            </div>
+        </div>
+        <!-- question 8 -->
+        <div class="question mb-4" data-correct="B">
+            <img src="questions/a_q8.png" alt="Question 8">
+            <div>
+                <input type="radio" name="q8" value="A"> A
+                <input type="radio" name="q8" value="B"> B
+                <input type="radio" name="q8" value="C"> C
+                <input type="radio" name="q8" value="D"> D
+                <input type="radio" name="q8" value="E"> E
+            </div>
+        </div>
+        <!-- question 9 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q9.png" alt="Question 9">
+            <div>
+                <input type="radio" name="q9" value="A"> A
+                <input type="radio" name="q9" value="B"> B
+                <input type="radio" name="q9" value="C"> C
+                <input type="radio" name="q9" value="D"> D
+                <input type="radio" name="q9" value="E"> E
+            </div>
+        </div>
+        <!-- question 10 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q10.png" alt="Question 10">
+            <div>
+                <input type="radio" name="q10" value="A"> A
+                <input type="radio" name="q10" value="B"> B
+                <input type="radio" name="q10" value="C"> C
+                <input type="radio" name="q10" value="D"> D
+                <input type="radio" name="q10" value="E"> E
+            </div>
+        </div>
+        <img style="width:700px" src="questions/a_table.png" alt="Questions 13-15">
+        <!-- question 11 -->
+        <div class="question mb-4" data-correct="D">
+            <img src="questions/a_q11.png" alt="Question 11">
+            <div>
+                <input type="radio" name="q11" value="A"> A
+                <input type="radio" name="q11" value="B"> B
+                <input type="radio" name="q11" value="C"> C
+                <input type="radio" name="q11" value="D"> D
+                <input type="radio" name="q11" value="E"> E
+            </div>
+        </div>
+        <!-- question 12 -->
+        <div class="question mb-4" data-correct="A">
+            <img src="questions/a_q12.png" alt="Question 12">
+            <div>
+                <input type="radio" name="q12" value="A"> A
+                <input type="radio" name="q12" value="B"> B
+                <input type="radio" name="q12" value="C"> C
+                <input type="radio" name="q12" value="D"> D
+                <input type="radio" name="q12" value="E"> E
+            </div>
+        </div>
+        <!-- question 13 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q13.png" alt="Question 13">
+            <div>
+                <input type="radio" name="q13" value="A"> A
+                <input type="radio" name="q13" value="B"> B
+                <input type="radio" name="q13" value="C"> C
+                <input type="radio" name="q13" value="D"> D
+                <input type="radio" name="q13" value="E"> E
+            </div>
+        </div>
+        <!-- question 14 -->
+        <div class="question mb-4" data-correct="E">
+            <img style="width:800px" src="questions/a_q14.png" alt="Question 14">
+            <div>
+                <input type="radio" name="q14" value="A"> A
+                <input type="radio" name="q14" value="B"> B
+                <input type="radio" name="q14" value="C"> C
+                <input type="radio" name="q14" value="D"> D
+                <input type="radio" name="q14" value="E"> E
+            </div>
+        </div>
+        <!-- question 15 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q15.png" alt="Question 15">
+            <div>
+                <input type="radio" name="q15" value="A"> A
+                <input type="radio" name="q15" value="B"> B
+                <input type="radio" name="q15" value="C"> C
+                <input type="radio" name="q15" value="D"> D
+                <input type="radio" name="q15" value="E"> E
+            </div>
+        </div>
+        <!-- question 16 -->
+        <div class="question mb-4" data-correct="C">
+            <img src="questions/a_q16.png" alt="Question 16">
+            <div>
+                <input type="radio" name="q16" value="A"> A
+                <input type="radio" name="q16" value="B"> B
+                <input type="radio" name="q16" value="C"> C
+                <input type="radio" name="q16" value="D"> D
+                <input type="radio" name="q16" value="E"> E
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="result" class="mt-4"></div>
+</div>
+
+<script>
+    let timeLeft = 600; // 10 minutes in seconds
+    const timerElement = document.getElementById('timer');
+
+    // Timer countdown
+    const timerInterval = setInterval(() => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        timeLeft--;
+        if (timeLeft < 0) {
+            clearInterval(timerInterval);
+            submitQuiz();
+        }
+    }, 1000);
+
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        submitQuiz();
+    });
+
+    function submitQuiz() {
+        clearInterval(timerInterval);
+        const questions = document.querySelectorAll('.question');
+        let correctCount = 0;
+        let answeredCount = 0;
+        const results = [];
+
+        questions.forEach((question, index) => {
+            const questionId = `q${index + 1}`;
+            const correctAnswer = question.dataset.correct;
+            const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+            if (selected) {
+                answeredCount++;
+                const isCorrect = selected.value === correctAnswer;
+                if (isCorrect) correctCount++;
+                results.push([questionId, isCorrect ? "Correct" : "Incorrect"]);
+            } else {
+                results.push([questionId, "Unanswered"]);
+            }
+        });
+
+        const totalQuestions = questions.length;
+        const percentageScore = ((correctCount / answeredCount) * 100).toFixed(2);
+
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `
+            <h3>Your Results:</h3>
+            <p>Questions Answered: ${answeredCount} / ${totalQuestions}</p>
+            <p>Correct Answers: ${correctCount}</p>
+            <p>Score Percentage: ${percentageScore}%</p>
+        `;
+
+        saveToCSV(results, correctCount, answeredCount, percentageScore);
+    }
+
+    function saveToCSV(results, correctCount, answeredCount, percentageScore) {
+        const rows = [
+            ["Question", "Result"],
+            ...results,
+            [],
+            ["Questions Answered", answeredCount],
+            ["Correct Answers", correctCount],
+            ["Score Percentage", `${percentageScore}%`]
+        ];
+
+        // Convert rows to CSV
+        const csvContent = rows.map(row => row.join(",")).join("\n");
+
+        // Create a Blob from the CSV
+        const blob = new Blob([csvContent], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+
+        // Create a download link
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "quiz_results.csv";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+</body>
+</html>

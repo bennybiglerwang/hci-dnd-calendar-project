@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Comprehension Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Video Comprehension Quiz</h1>
+    <div class="text-right timer" id="timer">10:00</div>
+    <div class="text-center">Please complete this to the best of your ability. You will have 10 minutes in total, <br />and it will submit automatically. You may work on the questions as you watch the videos. <br />You are not expected to finish all of the questions!</div>
+    <form id="quizForm">
+
+        <div class="video-container row justify-content-center align-items-center my-4">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/638004135?h=075cde46c4" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>1. What did Rachel get?</h5>
+            <div>
+                <input type="radio" name="q1" value="A"> a letter
+                <input type="radio" name="q1" value="B"> a paycheck
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>2. What was Phoebe's first job?</h5>
+            <div>
+                <input type="radio" name="q2" value="A"> she worked at a Dairy Queen
+                <input type="radio" name="q2" value="B"> she worked in a mine
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>3. Did Rachel earn a lot of money?</h5>
+            <div>
+                <input type="radio" name="q3" value="A"> no, it doesn't sound like it.
+                <input type="radio" name="q3" value="B"> yes
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>4. Who took all of Rachel's money?</h5>
+            <div>
+                <input type="radio" name="q4" value="A"> FICA (Federal Insurance Contributions Act)
+                <input type="radio" name="q4" value="B"> her employer
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>5. Why do Rachel's friends give her a big tip?</h5>
+            <div>
+                <input type="radio" name="q5" value="A"> because she's a great waitress
+                <input type="radio" name="q5" value="B"> because her job doesn't pay a lot of money
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>6. One of Rachel's friends _____________.</h5>
+            <div>
+                <input type="radio" name="q6" value="A"> sells real estate
+                <input type="radio" name="q6" value="B"> is pregnant
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>7. Another one of Rachel's friends ____________.</h5>
+            <div>
+                <input type="radio" name="q7" value="A"> is engaged to be married
+                <input type="radio" name="q7" value="B"> works at a zoo
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>8. And other one of Rachel's friends ____________.</h5>
+            <div>
+                <input type="radio" name="q8" value="A"> is a successful business woman
+                <input type="radio" name="q8" value="B"> is a successful journalist
+            </div>
+        </div>
+
+        <!------------------- VIDEO 2 --------------------->
+        <hr>
+        <div class="video-container row justify-content-center align-items-center my-4">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/638008038?h=40a02435e3" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>9. Monica says that Ross _________________________.</h5>
+            <div>
+                <input type="radio" name="q9" value="A"> can be really competitive
+                <input type="radio" name="q9" value="B"> is really good at poker
+            </div>
+        </div>
+
+         <!-- Question 10 -->
+         <div class="question text-center mb-4" data-correct="B">
+            <h5>10. Where did Rachel get an interview?</h5>
+            <div>
+                <input type="radio" name="q10" value="A"> She got an interview to buy clothes
+                <input type="radio" name="q10" value="B"> She got an interview at Sak's Fifth Avenue
+            </div>
+        </div>
+
+         <!-- Question 11 -->
+         <div class="question text-center mb-4" data-correct="B">
+            <h5>11. Who is Alice?</h5>
+            <div>
+                <input type="radio" name="q11" value="A"> Monica's friend
+                <input type="radio" name="q11" value="B"> Monica's aunt
+            </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>12. Does Alice like Phoebe's earrings?</h5>
+            <div>
+                <input type="radio" name="q12" value="A"> Yes
+                <input type="radio" name="q12" value="B"> Not sure...
+            </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>13. How long was Rachel's interview?</h5>
+            <div>
+                <input type="radio" name="q13" value="A"> about 30 minutes
+                <input type="radio" name="q13" value="B"> two and half hours
+            </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>14. Did the girls win?</h5>
+            <div>
+                <input type="radio" name="q14" value="A"> Phoebe won, but Rachel and Monica lost.
+                <input type="radio" name="q14" value="B"> No, they all lost
+            </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>15. How much does Rachel owe?</h5>
+            <div>
+                <input type="radio" name="q15" value="A"> She owes $7.50
+                <input type="radio" name="q15" value="B"> She owes $15
+                <input type="radio" name="q15" value="C"> She owes $10
+            </div>
+        </div>
+
+        <hr>
+
+        <!---------------------------- VIDEO 3 ------------------------->
+        <div class="video-container row justify-content-center align-items-center my-4">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/638009747?h=87bb32e55b" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>16. At the beginning of the video, who is winning?</h5>
+            <div>
+                <input type="radio" name="q16" value="A"> Rachel
+                <input type="radio" name="q16" value="B"> Ross
+            </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>17. Why is Rachel depressed after the phone call?</h5>
+            <div>
+                <input type="radio" name="q17" value="A"> she didn't get the job
+                <input type="radio" name="q17" value="B"> she doesn't say
+            </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>18. What does Rachel call Ross?</h5>
+            <div>
+                <input type="radio" name="q18" value="A"> "not a nice guy"
+                <input type="radio" name="q18" value="B"> loser
+            </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>19. Does Rachel have any money in her purse?</h5>
+            <div>
+                <input type="radio" name="q19" value="A"> yes - $17 dollars
+                <input type="radio" name="q19" value="B"> no
+            </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="question text-center mb-4" data-correct="B">
+            <h5>20. What does Ross say at the end of the video?</h5>
+            <div>
+                <input type="radio" name="q20" value="A"> That's a tough hand to beat.
+                <input type="radio" name="q20" value="B"> Look how happy she is.
+            </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="question text-center mb-4" data-correct="A">
+            <h5>21. At the end of the video, we see that Ross</h5>
+            <div>
+                <input type="radio" name="q21" value="A"> was probably being "a nice guy."
+                <input type="radio" name="q21" value="B"> isn't very good a poker. He needs to learn how to bluff better!
+            </div>
+        </div>
+
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    </form>
+    <div id="result" class="mt-4"></div>
+</div>
+
+<script>
+    let timeLeft = 600; // 10 minutes in seconds
+    const timerElement = document.getElementById('timer');
+
+    // Timer countdown
+    const timerInterval = setInterval(() => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+        timeLeft--;
+        if (timeLeft < 0) {
+            clearInterval(timerInterval);
+            submitQuiz();
+        }
+    }, 1000);
+
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        submitQuiz();
+    });
+
+    function submitQuiz() {
+        clearInterval(timerInterval);
+        const questions = document.querySelectorAll('.question');
+        let correctCount = 0;
+        let answeredCount = 0;
+        const results = [];
+
+        questions.forEach((question, index) => {
+            const questionId = `q${index + 1}`;
+            const correctAnswer = question.dataset.correct;
+            const selected = document.querySelector(`input[name="${questionId}"]:checked`);
+            if (selected) {
+                answeredCount++;
+                const isCorrect = selected.value === correctAnswer;
+                if (isCorrect) correctCount++;
+                results.push([questionId, isCorrect ? "Correct" : "Incorrect"]);
+            } else {
+                results.push([questionId, "Unanswered"]);
+            }
+        });
+
+        const totalQuestions = questions.length;
+        const percentageScore = ((correctCount / answeredCount) * 100).toFixed(2);
+
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `
+            <h3>Your Results:</h3>
+            <p>Questions Answered: ${answeredCount} / ${totalQuestions}</p>
+            <p>Correct Answers: ${correctCount}</p>
+            <p>Score Percentage: ${percentageScore}%</p>
+        `;
+
+        saveToCSV(results, correctCount, answeredCount, percentageScore);
+    }
+
+    function saveToCSV(results, correctCount, answeredCount, percentageScore) {
+        const rows = [
+            ["Question", "Result"],
+            ...results,
+            [],
+            ["Questions Answered", answeredCount],
+            ["Correct Answers", correctCount],
+            ["Score Percentage", `${percentageScore}%`]
+        ];
+
+        // Convert rows to CSV
+        const csvContent = rows.map(row => row.join(",")).join("\n");
+
+        // Create a Blob from the CSV
+        const blob = new Blob([csvContent], { type: "text/csv" });
+        const url = URL.createObjectURL(blob);
+
+        // Create a download link
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "quiz_results.csv";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+</body>
+</html>
