@@ -56,9 +56,9 @@
       
       <center>
         <div style="display: inline-block; text-align: center;">
-          <a href="tasks/arithmetic.html" class="btn btn-outline-dark">Arithmetic Task</a>
-          <a href="tasks/reading.html" class="btn btn-outline-dark">Reading Task</a>
-          <a href="tasks/video_comp.html" class="btn btn-outline-dark">Video Comprehension Task</a>
+          <a id="arithmeticLink" class="btn btn-outline-dark">Arithmetic Task</a>
+          <a id="readingLink" class="btn btn-outline-dark">Reading Task</a>
+          <a id="video_compLink" class="btn btn-outline-dark">Video Comprehension Task</a>
           <br>
           <center>
             <br>
@@ -77,10 +77,12 @@
       <!-- List of events (nearby events) -->
       <pre id="content" style="font-family: sans-serif; line-height: 1.15;"></pre>
     </div>
+    <center><button onclick="getNotifPerm()" id="notif">Submit</button></center>
   </div>
 
   <!-- JS Functions -->
   <script type="text/javascript">
+    let dndLevel = 0
     // Client ID and API key from the Developer Console
     var CLIENT_ID = '557991485532-q7db07kf6dr6u9ksoj5inccembokarua.apps.googleusercontent.com';
     var API_KEY = 'AIzaSyCk2LSHIXPuuNAYSopI9HBc4i0MVW792Ao';
@@ -104,11 +106,13 @@
     // Retrieves the value from DND Number Box:
     function getValue() {
       const dnd_input = document.getElementById("dnd_level");
-      const dndLevel = dnd_input.value;
-
+      dndLevel = dnd_input.value;
+      console.log(dndLevel)
+      document.getElementById('arithmeticLink').href = `tasks/arithmetic.html?dnd=${dndLevel}`
+      document.getElementById('readingLink').href = `tasks/reading.html?dnd=${dndLevel}`
+      document.getElementById('video_compLink').href = `tasks/video_comp.html?dnd=${dndLevel}`
       alert(`Your DND Priority Level has been set to ${dndLevel}`)
     }
-
     /**
      *  Initializes the API client library and sets up sign-in state
      *  listeners.
@@ -202,6 +206,15 @@
           appendPre('No upcoming events found.');
         }
       });
+    }
+    function getNotifPerm() {
+        Notification.requestPermission().then(function(permission) {
+            if (permission === "granted") {
+                alert("Notification permission granted!");
+            } else {
+                alert("Notification permission denied.");
+            }
+        });
     }
   </script>
 
