@@ -2,6 +2,15 @@ img {
     width: 400px;
 }
 
+.video-container {
+    position: sticky;
+    top: 0; /* Sticks the video to the top of the viewport */
+    z-index: 10; /* Ensures the video is above other content if needed */
+    background-color: white; /* Optional: To avoid overlapping text visibility */
+    padding: 10px 0; /* Optional: To add some spacing around the video */
+}
+
+
 .timer {
     font-size: 1.5rem;
     font-weight: bold;
