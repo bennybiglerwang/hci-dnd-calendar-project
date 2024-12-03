@@ -5,6 +5,14 @@ img {
 .timer {
     font-size: 1.5rem;
     font-weight: bold;
+    position: fixed;
+    top: 10px; /* Adjust this to control the distance from the top */
+    right: 10px; /* Adjust this to control the distance from the right */
+    background-color: white; /* Optional: Add a background color for readability */
+    padding: 5px 10px; /* Optional: Add some padding */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other elements */
 }
 .question img {
     max-width: 100%;
