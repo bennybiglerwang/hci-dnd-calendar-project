@@ -1,0 +1,11 @@
+img {
+    width: 400px;
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.question img {
+    max-width: 100%;
+}
