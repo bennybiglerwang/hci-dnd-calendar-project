@@ -12,12 +12,12 @@ const mathScript = [
   },
   {
     "title": "Outlook",
-    "desc": "I cannot seems to get my code to work for this section, any help? Hello Student, you don't have a base case on your recursive function",
+    "desc": "Piazza Daily Digest for CS6543: I cannot seems to get my code to work for this section, any help? Hello Student, you don't have a base case on your recursive function",
     "alertLevel": "4"
   },
   {
     "title": "McDonalds: Are You Hungry?",
-    "desc": "Get a free quater pounder meal with a purchace of $20 or more today.",
+    "desc": "Get a free quarter pounder meal with a purchace of $20 or more today.",
     "alertLevel": "1"
   },
   {
@@ -41,13 +41,33 @@ const mathScript = [
     "alertLevel": "2"
   },
   {
+    "title": "Spotify",
+    "desc": "It's true. The Beatles are on Spotify. Play music's greatest catalogue right now.",
+    "alertLevel": "3"
+  },
+  {
     "title": "Canvas",
     "desc": "Assignment 4: Due date postponed : Heap Sort, CS6701",
     "alertLevel": "3"
   },
   {
+    "title": "Lyft",
+    "desc": "It looks like you missed your last weeks goal of $1,000.00, time to get to work",
+    "alertLevel": "2"
+  },
+  {
+    "title": "Outlook",
+    "desc": "UVA Daily Report: From 'From Americas Got Talent to UVA: Lighting of the Lawn's First Drone Show",
+    "alertLevel": "4"
+  },
+  {
     "title": "Outlook",
     "desc": "Piazza Digest for CS6001: Do we have any class tomorrow?",
+    "alertLevel": "4"
+  },
+  {
+    "title": "Message",
+    "desc": "George: Yo, can ya pick me up on stranded on Mars",
     "alertLevel": "4"
   },
   {
@@ -57,13 +77,18 @@ const mathScript = [
   },
   {
     "title": "Piazza Digest for CS6301",
-    "desc": "Will tomorrows lecture be recorded?",
+    "desc": "Will tomorrows lecture be recorded? Hi Student, no the lecture will not be recorded",
     "alertLevel": "2"
   },
   {
     "title": "Outlook",
-    "desc": "Piazza Digest for CS6301: Will tomorrows lecture be recorded?",
+    "desc": "Piazza Digest for CS6301: Will tomorrows lecture be recorded? Hi Student, no the lecture will not be recorded",
     "alertLevel": "4"
+  },
+  {
+    "title": "Spotify",
+    "desc": "We made something just for you. Check out your Daily Mix in the Home tab.",
+    "alertLevel": "3"
   },
   {
     "title": "Canvas",
@@ -72,8 +97,13 @@ const mathScript = [
   },
   {
     "title": "Chipotle",
-    "desc": "How aobut Chipotle on us? Redeem your points for a free Chicken Bown in the Rewards Exchange",
+    "desc": "How about Chipotle on us? Redeem your points for a free Chicken Bown in the Rewards Exchange",
     "alertLevel": "1"
+  },
+  {
+    "title": "Message",
+    "desc": "George: I'm running out of oxygen on here, send some help",
+    "alertLevel": "4"
   },
   {
     "title": "Piazza Digest for CS6701",
