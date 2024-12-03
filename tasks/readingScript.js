@@ -10,6 +10,11 @@ const readingScript = [
     "alertLevel": "3"
   },
   {
+    "title": "DUOLINGO",
+    "desc": "It's time for your daily French lesson. Take 5 minutes now to complete it.",
+    "alertLevel": "1"
+  },
+  {
     "title": "Gmail",
     "desc": "Critical alert: 'Payment failure - Your subscription will be cancelled tomorrow unless resolved.'",
     "alertLevel": "4"
@@ -32,7 +37,7 @@ const readingScript = [
   {
     "title": "Outlook",
     "desc": "Final Interview: 'Congratulations on passing your interview please schedule a time on Friday for an interview.'",
-    "alertLevel": "5"
+    "alertLevel": "4"
   },
   {
     "title": "Medium",
@@ -50,6 +55,11 @@ const readingScript = [
     "alertLevel": "1"
   },
   {
+    "title": "DUOLINGO",
+    "desc": "It's time for your daily French lesson. Take 5 minutes now to complete it.",
+    "alertLevel": "1"
+  },
+  {
     "title": "YouTube",
     "desc": "New Video Alert: 'Whoever Survives on the Island, Wins the Island!' from Mr. Beast.",
     "alertLevel": "1"
@@ -58,6 +68,11 @@ const readingScript = [
     "title": "Piazza",
     "desc": "Classwide announcement: 'Final project submission guidelines updated.'",
     "alertLevel": "3"
+  },
+  {
+    "title": "Amazon",
+    "desc": "Your package containing 'Wireless Keyboard' has been delivered. Check your doorstep!",
+    "alertLevel": "1"
   },
   {
     "title": "Gmail",
@@ -105,6 +120,11 @@ const readingScript = [
     "alertLevel": "1"
   },
   {
+    "title": "YouTube",
+    "desc": "New Video Alert: '10 Life Hacks for Better Productivity' from ProductivityPro.",
+    "alertLevel": "1"
+  },
+  {
     "title": "Gmail",
     "desc": "New email from Professor Smith: 'Your midterm grades have been posted.'",
     "alertLevel": "2"
@@ -117,7 +137,7 @@ const readingScript = [
   {
     "title": "LinkedIn",
     "desc": "High-priority message: 'Offer letter for Software Engineer position at MicroTech.'",
-    "alertLevel": "5"
+    "alertLevel": "4"
   },
 
   ]
