@@ -37,11 +37,8 @@
       <div>
         <p><b><u><center>Instructions:</center></u></b></p>
         <p>1. Log in to your Gmail account and authorize Google Calendar to view your events. For the purposes of this study, this should already been done for you!</p>
-        <p>2. Schedule an event on the "HCI-DND" calendar by either clicking on the calendar icon above next to the main header, or clicking the <b>+</b> icon in the bottom right area of the HCI-DND calendar. For this study, you will schedule an event for <b>Arithmetic Problem Solving</b>, <b>Reading Comprehension</b>, and <b>Video Comprehension.</b></p>
-        <p>3. Enter Threshold DND Level below and click the Submit button. After clicking the Submit button, a confirmation box should pop to inform you that the DND Priority Level has been set:</p>
-        <center><input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" /></center>
-        <br>
-        <center><button onclick="getValue()" id="test">Submit</button></center>
+        <p>2. Schedule an event on the "HCI-DND" calendar by either clicking on the calendar icon above next to the main header, or clicking the <b>+</b> icon in the bottom right area of the HCI-DND calendar. For this study, you will schedule an event for <b>Arithmetic Task</b>, <b>Reading Task</b>, and <b>Video Comprehension Task</b></p>
+        <p>3. Enter the DND Level below and click on the task to conduct. A new window should load with the appropriate task!</p>
       </div>
       <!--Authorization and disconnect button-->
       <div align="center">
@@ -62,6 +59,14 @@
           <a href="tasks/arithmetic.html" class="btn btn-outline-dark">Arithmetic Task</a>
           <a href="tasks/reading.html" class="btn btn-outline-dark">Reading Task</a>
           <a href="tasks/video_comp.html" class="btn btn-outline-dark">Video Comprehension Task</a>
+          <br>
+          <center>
+            <br>
+            <label for="test">DND Priority Level:</label>
+            <input type="number" id = "dnd_level" name="dnd_level" min="1" max="5" />
+          </center>
+          <br>
+          <center><button onclick="getValue()" id="test">Submit</button></center>
       </div>
       </center>
       <br>
